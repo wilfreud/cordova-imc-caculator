@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+
+    <!-- jQuery & jQuery-mobile -->
+    <script src="../lib/jquery-1.11.3.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- styles & tailwind -->
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+
+    <title>Calculateur d'IMC</title>
+  </head>
+  <body class="bg-[#F5F5F5] text-[#4B164C] transition-colors duration-300">
+    <div data-role="page" id="mainPage">
+      <header
+        data-role="header"
+        class="text-white px-4 py-4 text-center bg-[#DD88CF]"
+      >
+        <h1 class="text-sm font-light">Calculateur d'IMC</h1>
+      </header>
+
+      <div role="main" class="ui-content p-4">
+        <!-- Input -->
+        <div class="mb-4">
+          <label for="weight" class="block text-sm font-medium"
+            >Poids (kg)</label
+          >
+          <input
+            id="weight"
+            type="number"
+            placeholder="Ex: 70"
+            class="w-full border px-3 py-2 rounded mb-2 bg-[#F8E7F6] text-[#4B164C]"
+          />
+          <label for="height" class="block text-sm font-medium"
+            >Taille (m)</label
+          >
+          <input
+            id="height"
+            type="number"
+            placeholder="Ex: 1.75"
+            class="w-full border px-3 py-2 rounded mb-2 bg-[#F8E7F6] text-[#4B164C]"
+          />
+          <button
+            id="calculateBtn"
+            class="bg-[#DD88CF] text-white px-4 py-2 rounded w-full"
+          >
+            Calculer
+          </button>
+        </div>
+
+        <!-- Result -->
+        <div class="mt-6">
+          <h2 class="text-lg font-semibold mb-2">Résultat</h2>
+          <p id="result" class="text-center text-lg font-medium">
+            Votre IMC est : -
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
